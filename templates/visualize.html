@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% block content %}
+<h1 class="text-center display-5">Game wise Global Sales in Millions</h1>
+<canvas id="myChart" style="width: 100%"></canvas>
+<script type="text/javascript">
+  function visualize(countries, exports) {
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: countries,
+        datasets: [{
+          backgroundColor: "black",
+          data: exports
+        }]
+      },
+      options:{
+        legend: { display: false }
+      }
+    });
+  }
+  visualize({{ countries | safe }}, {{ exports | safe }});
+</script>
+{% endblock %}

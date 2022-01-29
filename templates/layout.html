@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>India Trade</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+  <body class="bg-warning">
+    <!-- Grey with black text -->
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/add">Add data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/visualize">Visualize</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container py-4">
+      {% if message %}
+      <div class="alert-secondary text-bold py-3 px-2">{{ message }}</div>
+      {% endif %} {% block content %}{% endblock %}
+    </div>
+    <div style="width: 100%" class="bg-primary py-4 px-3 text-center">Global Sales Visualization</div>
+  </body>
+</html>

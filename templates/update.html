@@ -1,0 +1,26 @@
+{% extends "layout.html" %} {% block content %}
+<form method="post" action="/updateExport">
+  <input type="hidden" value="{{ data['_id'] }}" name="id" />
+  <div class="form-group">
+    <label for="Rank">Rank</label>
+    <input type="text" class="form-control" placeholder="Enter rank" name="Rank" value="{{ data['Rank'] }}" />
+  </div>
+  <div class="form-group">
+    <label for="Name">Name:</label>
+    <input type="text"class="form-control" placeholder="Enter Name" name="Name" value="{{ data['Name'] }}" />
+  </div>
+  <div class="form-group">
+    <label for="Genre">Genre:</label>
+    <input type="text" class="form-control" placeholder="Enter Genre" name="Genre" value="{{ data['Genre'] }}" />
+  </div>
+  <div class="form-group">
+    <label for="Global_Sales">Global Sales:</label>
+    <input type="text" class="form-control" placeholder="Enter Global Sales" name="Global_Sales" value="{{ data['Global_Sales'] }}" />
+  </div>
+  <div class="form-group">
+    <label for="Year">Year:</label>
+    <input type="text" class="form-control" placeholder="Enter year" name="Year" value="{{ data['Year'] }}" />
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+{% endblock %}
